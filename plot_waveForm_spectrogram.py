@@ -24,3 +24,4 @@ fil = sys.argv[1]
 
 show_wave_n_spec(fil)
 
+
