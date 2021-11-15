@@ -3,7 +3,7 @@ import sys
 from pylab import *
 import wave
 
-def show_wave_n_spec(speech):
+def wf_spectr(speech):
     spf = wave.open(speech,'r')
     sound_info = spf.readframes(-1)
     sound_info = fromstring(sound_info, 'int32')
@@ -21,7 +21,4 @@ def show_wave_n_spec(speech):
     spf.close()
 
 fil = sys.argv[1]
-
-show_wave_n_spec(fil)
-
-
+wf_spectr(fil)

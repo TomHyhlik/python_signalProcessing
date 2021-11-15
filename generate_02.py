@@ -7,7 +7,13 @@ sampleRate = 44100
 frequency = 100
 length = 2
 
-t = np.linspace(0, length, sampleRate * length) # Produces a 5 second Audio - File
+t = np.linspace(0, length, sampleRate * length) # Produces a 2 second Audio - File
+
 y = np.sin(frequency * 2 * np.pi * t) # Has frequency of 440 Hz
 
+z = np.exp(2) 
+
+y = y * z
+
 wavfile.write(FILENAME_OUT, sampleRate, y)
+
